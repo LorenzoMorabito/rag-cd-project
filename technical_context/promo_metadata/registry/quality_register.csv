@@ -1,0 +1,9 @@
+object_id,object_type,status,severity,finding,recommended_action,evidence_source
+trusted_starschema_01,schema,strong_source,info,Schema is a mature promotional/channel-dynamics star schema with 1 fact and 29 dimensions,Use as primary promo technical layer,technical_analysis
+trusted_starschema_01,schema,monthly_native,info,Time model is monthly-native through MONTH_ID and d_time,Keep month as native grain; derive QTR/semester/year from d_time,technical_analysis
+f_channel_dynamic_data,fact_table,business_grain_clean,info,Final assessment says business grain uniqueness is clean with 0 duplicate business-grain groups,Treat fact as reliable base for semantic model,final_assessment
+f_channel_dynamic_data.CONVERTED_CONTACTS,measure,conditionally_nullable,medium,Converted Contacts has material null rate and should remain nullable,Do not default to zero without business sign-off,final_assessment
+d_reconstructed_markets,dimension_table,mandatory_fix,high,Exact duplicate MARKET_ID rows make the market dimension unsafe as a standard 1:* join,Deduplicate or publish canonical one-row-per-MARKET_ID view before semantic use,final_assessment
+ATC4_ID|SPONSORING_COMPANY_ID|COUNTRY_ID|NPS_SCALE_ID|MONTH_ID|MARKET_ID,relationship_group,metadata_gap,medium,Six logical joins are validated by data but missing formal FK metadata,"Use as validated joins in RAG/semantic docs, but request metadata hardening in Databricks",final_assessment
+promo_oas,migration_baseline,useful_not_canonical,info,OAS promo sample is good for coverage/backlog analysis but not a full canonical metric universe,"Keep as coverage appendix and backlog seed, not sole source of truth",promo_oas_analysis
+promo_oas_vs_model,coverage_gap,time_grain_gap,medium,Main OAS parity gap is MON/MQTR/QTR packaging and advanced weighted-calls analytical families,Plan monthly/MQTR policy and weighted-calls index/SOV families in semantic layer,promo_oas_analysis

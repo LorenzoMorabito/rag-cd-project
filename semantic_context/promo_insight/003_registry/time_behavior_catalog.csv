@@ -1,0 +1,5 @@
+time_behavior_id,label,definition,technical_anchor_table,technical_anchor_columns,explicitness,review_status
+IQVIA-PROMO-TIME-mon,MON,Current month grain used as a primary user-facing frame for promotional measures.,d_time,MONTH_ID|MONTH,explicit,candidate_unreviewed
+IQVIA-PROMO-TIME-mqtr,MQTR,"Moving quarter behavior based on a 3-month rolling window; observed via PERIODROLLING(...,-2,0).",d_time,MONTH_ID|QUARTER_ID|QUARTER,pattern_inferred,candidate_unreviewed
+IQVIA-PROMO-TIME-qtr,QTR,Quarter frame used directly in promotional benchmarking and performance reporting.,d_time,QUARTER_ID|QUARTER,explicit,candidate_unreviewed
+IQVIA-PROMO-TIME-vs-py,vs PY,Comparator family using previous-year value at the same analytical frame; denominator and null policy still require validation per measure family.,d_time,MONTH_ID|QUARTER_ID|YEAR_ID,needs_validation,candidate_unreviewed

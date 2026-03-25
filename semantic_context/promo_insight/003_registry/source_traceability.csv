@@ -1,0 +1,5 @@
+source_file,source_type,records,role
+promo_oas_measure_inventory.csv,structured_inventory,25,"primary structured inventory of observed measure captions, time behaviors, formula patterns, and notes"
+promo_oas_measure_migration_analysis.md,narrative_analysis,85,"secondary narrative context used to recover business meaning, dynamic-family interpretation, and dimension usage patterns"
+iqvia_rag_promo_metadata/registry/column_catalog.csv,technical_catalog,159,technical alignment source used to anchor measures and dimensions to trusted_starschema_01
+iqvia_rag_promo_metadata/registry/table_catalog.csv,technical_catalog,30,technical table inventory used to identify fact and dimension tables for promo semantic anchoring

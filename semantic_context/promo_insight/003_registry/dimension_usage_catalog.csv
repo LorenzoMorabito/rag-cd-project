@@ -1,0 +1,23 @@
+measure_family_bucket,business_dimension,candidate_table,candidate_column,confidence,rationale,review_status
+spending_share_voice,interaction group / channel split,d_comunication_channels,COMUNICATION_CHANNEL,0.86,Observed Digital/Traditional splits map naturally to communication channels.,candidate_unreviewed
+spending_share_voice,product hierarchy,d_products_presented,PRODUCT_PRESENTED,0.7,Product slices are explicit in the insight set.,candidate_unreviewed
+spending_share_voice,brand hierarchy,d_local_brands,LOCAL_BRAND_ID,0.62,Brand/product benchmarking usually needs brand context; exact label not explicit in source.,candidate_unreviewed
+dynamic_contact_metrics,specialty,d_specialty,SPECIALTY,0.97,Specialty is explicitly observed in the insight source.,candidate_unreviewed
+dynamic_contact_metrics,gp/specialty variant,d_specialty,GP_SPECIALTY,0.91,GPs-Spec appears explicitly in the insight source.,candidate_unreviewed
+dynamic_contact_metrics,presentation position,d_presentation_position,PRESENTATION_POSITION,0.97,Presentation position is explicitly observed in the insight source.,candidate_unreviewed
+dynamic_contact_metrics,contact type,d_contact_types,CONTACT_TYPE,0.98,Contact type is explicitly observed in the insight source.,candidate_unreviewed
+dynamic_contact_metrics,contact channel,d_comunication_channels,COMUNICATION_CHANNEL,0.98,Contact channel is explicitly observed in the insight source.,candidate_unreviewed
+dynamic_contact_metrics,corporation,d_corporations,CORPORATION,0.98,Corporation is explicitly observed in the insight source.,candidate_unreviewed
+prescription_segmentation,prescription current,d_prescription_current,PRESCRIPTION_CURRENT,0.99,Prescription Current is explicitly observed in the insight source.,candidate_unreviewed
+prescription_segmentation,prescription future,d_prescription_future,PRESCRIPTION_FUTURE,0.99,Prescription Future is explicitly observed in the insight source.,candidate_unreviewed
+performance_positive_prescribing,future prescribing,d_prescription_future,PRESCRIPTION_FUTURE,0.96,Increase-Rx / positive prescribing logic is tied to future prescribing state.,candidate_unreviewed
+performance_positive_prescribing,contact type,d_contact_types,CONTACT_TYPE,0.84,Contact-based performance measures are often sliced by contact type.,candidate_unreviewed
+performance_positive_prescribing,contact channel,d_comunication_channels,COMUNICATION_CHANNEL,0.82,Execution performance is often reported by channel.,candidate_unreviewed
+weighted_calls_analytical,corporation,d_corporations,CORPORATION,0.98,Corporation/promoter/manufacturer are explicit in the insight source.,candidate_unreviewed
+weighted_calls_analytical,manufacturer,d_manufacturers,MANUFACTURER,0.97,Manufacturer is explicitly observed in the insight source.,candidate_unreviewed
+weighted_calls_analytical,specialty,d_specialty,SPECIALTY,0.95,Specialty / GPs-Spec are explicit in the insight source.,candidate_unreviewed
+weighted_calls_analytical,gp/specialty variant,d_specialty,GP_SPECIALTY,0.9,GPs-Spec is explicit in the insight source.,candidate_unreviewed
+weighted_calls_analytical,contact type,d_contact_types,CONTACT_TYPE,0.95,Contact type is explicitly observed in the insight source.,candidate_unreviewed
+weighted_calls_analytical,contact quality,d_contact_quality,CONTACT_QUALITY,0.95,Contact quality is explicitly observed in the insight source.,candidate_unreviewed
+weighted_calls_analytical,channel split,d_comunication_channels,COMUNICATION_CHANNEL,0.95,Channel split is explicitly observed in the insight source.,candidate_unreviewed
+all_families,time grain,d_time,MONTH|QUARTER|QUARTER_ID,0.99,All families show explicit MON/QTR or MQTR behavior; d_time is the natural technical anchor.,candidate_unreviewed
